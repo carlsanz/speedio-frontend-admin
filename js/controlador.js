@@ -25,3 +25,7 @@ function validarFormulario() {
     }
 
   }
+
+  function ingreso() {
+    
+  }

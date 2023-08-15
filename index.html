@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speedio</title>
     <script src="https://kit.fontawesome.com/6ec579827f.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,13 +27,47 @@
                 <button id="boton-inicio-sesion" onclick="validarFormulario()">Ingresar</button>
 
             </div>
-    
-            <footer id="footer">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-            </footer>
         </section>
+    </section>
+
+    <section id="inicio">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="seleccionado">INICIO</div>
+                <div class="no-seleccionado">EMPRESAS</div>
+                <div class="no-seleccionado">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <div id="contenedor-empleados">
+            <div class="empleado-pedidos">
+                <h1>EMPLEADOS</h1>
+                <input id="input-buscar" type="text" placeholder="Buscar">
+                
+                <button style="margin-bottom: 70px;" class="botton-estados">Ver Estado</button>
+                <button class="botton-estados">Asignar Pedido</button>
+            </div>
+            <div class="empleado-pedidos">
+                <h1>PEDIDOS</h1>
+                <input id="input-buscar" type="text" placeholder="Buscar">
+                <div class="pedidos-info">
+                    <span><i class="fa-solid fa-truck"></i></span>
+                    <p style="margin: 10px 10px 10px 15px;">Completados al Día</p>
+                </div>
+                <p class="pedidos-info-cantidad">60</p>
+                <div class="pedidos-info">
+                    <span><i class="fa-solid fa-truck"></i></span>
+                    <p style="margin: 10px 10px 10px 15px;">En Camino</p>
+                </div>
+                <p class="pedidos-info-cantidad">20</p>
+            </div>
+
+        </div>
+        
+
     </section>
     
     <script src="js/controlador.js"></script>

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     background-image: linear-gradient(#FFFFFF, #FFE226);
     color: #0B3A56;
 }
@@ -8,6 +8,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#inicio-sesion {
+    display: none;
 }
 
 #logo {
@@ -28,7 +31,7 @@ body {
 .input-inicio-sesion {
     height: 30px;
     border: 1px solid #0B3A56;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
 }
 
 #boton-inicio-sesion {
@@ -39,4 +42,89 @@ body {
     margin-top: 20px;
     color: #FFFFFF;
     font-size: 1rem;
+}
+
+/* inicio de sesion */
+#inicio {
+    display: block;
+}
+
+#img-inicio {
+    width: 4rem;
+}
+.seleccionado {
+    margin: 0 20px 0 20px;
+    background-color: #FFE226;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 120px;
+    height: 35px;
+    border: 1px solid #0B3A56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.no-seleccionado {
+    margin: 0 20px 0 20px;
+    color: #0B3A56;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 120px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+#contenedor-empleados {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    
+}
+.empleado-pedidos {
+    background-color: #FFE226;
+    width: 350px;
+    height: 400px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+#input-buscar {
+    height: 25px;
+    width: 230px;
+    border-radius: 10px;
+    border: 1px solid #0B3A56;
+    margin-bottom: 50px;
+}
+
+.botton-estados {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #0B3A56;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #C6382C;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+.pedidos-info {
+    display: flex;
+    align-items: center;
+    color: #0B3A56;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    
+}
+.pedidos-info-cantidad {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 10px 0 10px 0; 
 }
