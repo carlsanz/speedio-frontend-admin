@@ -40,7 +40,7 @@
                 <div class="seleccionado">INICIO</div>
                 <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
                 <div class="no-seleccionado" onclick="productos()">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="no-seleccionado" onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -81,7 +81,7 @@
                 <div class="seleccionado" onclick="ingreso()">INICIO</div>
                 <div class="no-seleccionado"onclick="generarPantallaEmpresa()">EMPRESAS</div>
                 <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="no-seleccionado" onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -170,7 +170,7 @@
                 <div class="seleccionado" onclick="ingreso()">INICIO</div>
                 <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
                 <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="no-seleccionado"onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -282,7 +282,7 @@
                 <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
                 <div class="seleccionado">EMPRESAS</div>
                 <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="no-seleccionado"onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -318,8 +318,8 @@
             <div style="display: flex; margin-right: 50px;">
                 <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
                 <div class="seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
-                <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="no-seleccionado" onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado"onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -377,7 +377,7 @@
                 <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
                 <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
                 <div class="seleccionado">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="no-seleccionado" onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -397,13 +397,13 @@
                     <img class="img-productos" src="img/bigos.png" alt="">
                 </div>
                 <div id="contenedor-btn">
-                    <button class="btn-productos">Ver Disponibles</button>
-                    <button class="btn-productos">Agregar al menú</button>
+                    <button class="btn-productos" onclick="productosDisponibles()" >Ver Disponibles</button>
+                    <button class="btn-productos" onclick="agregarProductos()">Agregar al menú</button>
                 </div>
             </div>
         </div>
     </section>
-
+<!-- Productos disponibles -->
     <section id="productos-Disponibles">
         <header style="display: flex; justify-content: space-between; align-items: center;">
             <div>
@@ -412,8 +412,8 @@
             <div style="display: flex; margin-right: 50px;">
                 <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
                 <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
-                <div class="seleccionado">PRODUCTOS</div>
-                <div class="no-seleccionado">PERFIL</div>
+                <div class="seleccionado" onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado" onclick="perfilAdministrador()">PERFIL</div>
             </div>
         </header>
         <hr>
@@ -464,6 +464,98 @@
             </div>
         </div>
     </section>
+
+    <!-- Agregar un producto -->
+ 
+    <section id="agregar-Productos">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="seleccionado" onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado" onclick="perfilAdministrador()">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+        
+        <div id="contenedor-padre-productos" >
+            <div style="display: flex; justify-content: center;">
+                <p id="parrafo-productos">Gestión de Productos</p>
+            </div>
+           
+            <div id="contenedor-productos">
+                <div style="background-color: #FFFFFF; width: 80%; height: 500px; display: flex; justify-content: center;">
+                    
+                    <select id="productosAgg" >
+                      <option value="producto1">Coco Baleadas</option>
+                      <option value="producto2">Churchs Chicken</option>
+                      <option value="producto3">Wendys</option>
+                      <option value="producto4">Little Caesars</option>
+                      <option value="producto5">Burger King</option>
+                      <option value="producto6">Bigos</option>
+                    </select>
+                </div>
+                <div id="contenedor-productos-disponibles">
+                    <div class="producto-agregar">
+                        <input class="input-agregar-producto" type="text" placeholder="Nombte del Producto">
+                        <input class="input-agregar-producto" type="text" placeholder="Precio Neto">
+                        <input class="input-agregar-producto" type="text" placeholder="Descripción del proyecto">
+                        <input class="input-agregar-producto" type="text" placeholder="Seleccionar Imagen">
+                        <button style="margin-top: 20px;" class="btn-productos">Agregar al Menú</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfil del administrador -->
+    <section id="perfil"> 
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="no-seleccionado" onclick="productos()">PRODUCTOS</div>
+                <div class="seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+
+        <div id="contenedor-perfil">
+            <div id="font-usuario">
+                <span><i class="fa-solid fa-circle-user"></i></span>
+            </div>
+            <div style="margin-left: 30px; margin-right: 100px; color: black;">
+                <div class="info-perfil">
+                    <h1>Nombre</h1>
+                    <p>Sherry Nicole</p>
+                </div>
+                <div class="info-perfil">
+                    <h1>Apellidos</h1>
+                    <p>Durón Salgado</p>
+                </div>
+                <div class="info-perfil">
+                    <h1>Cargo</h1>
+                    <p>Supervisor de Gestiones</p>
+                </div>
+                <div class="info-perfil">
+                    <h1>Usuario</h1>
+                    <p>SHERYN</p>
+                </div>
+                <div class="info-perfil">
+                    <h1>E-mail</h1>
+                    <p>sheryn@speedio.com</p>
+                </div>            
+            </div>
+        </div>
+
+    </section>
+
 
     
     <script src="js/controlador.js"></script>
