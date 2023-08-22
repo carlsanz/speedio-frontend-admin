@@ -7,7 +7,8 @@
     <script src="https://kit.fontawesome.com/6ec579827f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="body">
+    <!-- inicio de sesion -->
     <section id="inicio-sesion">
         <section id="inicio-sesión">
             <div id="contenedor-nombre-empresa">
@@ -29,30 +30,31 @@
             </div>
         </section>
     </section>
-
+<!-- Ingreso -->
     <section id="inicio">
-        <header style="display: flex; justify-content: space-between; align-items: center;">
+        <header id="header-ingreso">
             <div>
                 <img id="img-inicio" src="img/logo-speedio.png" alt="">
             </div>
             <div style="display: flex; margin-right: 50px;">
                 <div class="seleccionado">INICIO</div>
-                <div class="no-seleccionado">EMPRESAS</div>
-                <div class="no-seleccionado">PRODUCTOS</div>
+                <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="no-seleccionado" onclick="productos()">PRODUCTOS</div>
                 <div class="no-seleccionado">PERFIL</div>
             </div>
         </header>
-        <div id="contenedor-empleados">
-            <div class="empleado-pedidos">
+        <hr>
+        <div id="contenedor-empleados" >
+            <div class="empleado-pedidos" onclick="repartidores()">
                 <h1>EMPLEADOS</h1>
-                <input id="input-buscar" type="text" placeholder="Buscar">
+                <input class="input-buscar" type="text" placeholder="Buscar">
                 
                 <button style="margin-bottom: 70px;" class="botton-estados">Ver Estado</button>
                 <button class="botton-estados">Asignar Pedido</button>
             </div>
-            <div class="empleado-pedidos">
+            <div class="empleado-pedidos" onclick="asignarPedido()">
                 <h1>PEDIDOS</h1>
-                <input id="input-buscar" type="text" placeholder="Buscar">
+                <input class="input-buscar" type="text" placeholder="Buscar">
                 <div class="pedidos-info">
                     <span><i class="fa-solid fa-truck"></i></span>
                     <p style="margin: 10px 10px 10px 15px;">Completados al Día</p>
@@ -66,9 +68,403 @@
             </div>
 
         </div>
-        
+    </section>
+
+    <!-- pantalla de empleados -->
+
+    <section id="inicio-empleados">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="no-seleccionado"onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+
+        <div id="contenedor-estado-repartidores">
+            <div id="titulo-repartidor">
+                <p >Repartidores Activos</p>
+            </div>
+           
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; ">
+               
+                <p class="datos-repartidores">Datos Generales</p>
+                <p class="datos-repartidores"># De Pedido</p>
+                <p class="datos-repartidores">Ruta Actual</p>
+            </div>
+            <hr>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; align-items: center; background-color: #FFFFFF; margin-left: 20px; margin-right: 15px;border-radius: 10px;">
+                <div>
+                    <div style="display: flex; align-items: center;">
+                        <div>
+                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div>
+                            <p class="info-repartidores">Melvin Espino</p>
+                            <p class="info-repartidores">Usuario: melvine</p>
+                            <p class="info-repartidores">Telefono: 99909190</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div>
+                   <p class="info-repartidores">000243</p>
+                </div>
+                <div>
+                    <p class="info-repartidores">Col. las Lomas esquina opuesta edificio plaza azul</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="contenedor-estado-repartidores">
+            <div id="titulo-repartidor">
+                <p >Repartidores Sin Pedidos</p>
+            </div>
+           
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; ">
+               
+                <p class="datos-repartidores">Datos Generales</p>
+                <p class="datos-repartidores"># De Último Pedido</p>
+                <p class="datos-repartidores">Última Ruta</p>
+            </div>
+            <hr>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; align-items: center; background-color: #FFFFFF; margin-left: 20px; margin-right: 15px;border-radius: 10px;">
+                <div>
+                    <div style="display: flex; align-items: center;">
+                        <div>
+                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div>
+                            <p class="info-repartidores">Jasson Contreras</p>
+                            <p class="info-repartidores">Usuario: Jassonc</p>
+                            <p class="info-repartidores">Telefono: 80181900</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div>
+                   <p class="info-repartidores">000023</p>
+                </div>
+                <div>
+                    <p class="info-repartidores">Residencial Miraflores</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pedidos sin tomar -->
+     
+    <section id="pedidos-sin-tomar">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+
+        <div id="contenedor-pedidos">
+            <div style="display: flex; justify-content: center;">
+                <p id="title-pedidos">Pedidos sin tomar</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                <div style="margin-right: 100px;">
+                    <div class="pedidos">
+                        <div >
+                            <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                        </div>
+                        <div>
+                            <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                            <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                        </div>
+                    </div>
+                    <!-- Pedido individual -->
+                    <div class="pedidos">
+                        <div >
+                            <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                        </div>
+                        <div>
+                            <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                            <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                        </div>
+                    </div>
+                    <!-- Pedido individual -->
+                    <div class="pedidos">
+                        <div >
+                            <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                        </div>
+                        <div>
+                            <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                            <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                        </div>
+                    </div>
+                    <!-- Pedido individual -->
+                    <div class="pedidos">
+                        <div >
+                            <span><i class="icono-pedido fa-sharp fa-solid fa-basket-shopping"></i></span>
+                        </div>
+                        <div>
+                            <p style="margin-bottom: 0; margin-top: 28px;">Pedido #00023</p>
+                            <h5 style="margin-top: 5px; margin-bottom: 28px;">Destino: Res Miraflores</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- div de repartidores -->
+                <div style="margin-left: 100px; background-color: #FFFFFF; margin-right: 10px; ">
+                    <div style="display: flex; justify-content: center;">
+                        <p style="font-weight: bolder; font-size: 1.5rem;">Seleccionar Repartidor</p>
+                    </div>
+                    
+                    <hr>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;margin-left: 15px;">
+                        <div>
+                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div>
+                            <p class="info-repartidores">Jasson Contreras</p>
+                            <p class="info-repartidores">Usuario: Jassonc</p>
+                            <p class="info-repartidores">Telefono: 80181900</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="display: flex; align-items: center;margin-bottom: 30px;margin-left: 15px;">
+                        <div>
+                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div>
+                            <p class="info-repartidores">Jasson Contreras</p>
+                            <p class="info-repartidores">Usuario: Jassonc</p>
+                            <p class="info-repartidores">Telefono: 80181900</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="display: flex; align-items: center;margin-bottom: 30px;margin-left: 15px;">
+                        <div>
+                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div>
+                            <p class="info-repartidores">Jasson Contreras</p>
+                            <p class="info-repartidores">Usuario: Jassonc</p>
+                            <p class="info-repartidores">Telefono: 80181900</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                </div>
+                
+            </div>
+
+            <div id="div-asignar-pedido" >
+                <button id="botton-asignar-pedido">Asignar pedido</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empresas -->
+    <section id="empresas">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="seleccionado">EMPRESAS</div>
+                <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+        <!-- -->
+        <div id="contenedor-gestion-empresas">
+            <div style="display: flex;justify-content: center; margin-bottom: 50px;">
+                <p>Gestión de Empresas</p>
+            </div>
+            <div style="display: flex; justify-content: space-around; margin-bottom: 50px;">
+                <input id="input-buscar-empresas" type="text" placeholder="Buscar tienda">
+                <button id="button-agregar-registro" onclick="agregarEmpresa()">Agregar Registro</button>
+            </div>
+        </div>
+        <hr>
+        <div style="display: flex; justify-content: space-between;">
+            <img class="img-footer" src="img/burger-king.png" alt="">
+            <img class="img-footer" src="img/churchs.png" alt="">
+            <img class="img-footer" src="img/coco-baleadas.png" alt="">
+            <img class="img-footer" src="img/little-caesars.png" alt="">
+            <img class="img-footer" src="img/wendys.png" alt="">
+            <img class="img-footer" src="img/bigos.png" alt="">
+        </div>
+
 
     </section>
+
+    <!-- Agregar Registro de empresas -->
+    <section id="agregar-empresa">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="no-seleccionado"onclick="productos()">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+        <div id="contenedor-padre-empresas">
+            <div style="display: flex; justify-content: center;">
+                <P>Gestión Empresas</P>
+            </div>
+            
+            <div id="contenedor-empresa">
+        
+                    <div class="info-empresa">
+                        <p>Sucursal</p>
+                        <input class="input-info-empresa" type="text">
+                    </div>
+                    <div class="info-empresa">
+                        <p>Direccion</p>
+                        <input style="height: 40px;" class="input-info-empresa" type="text">
+                    </div>
+                    <div class="info-empresa">
+                        <p>Gerente</p>
+                        <input class="input-info-empresa" type="text">
+                    </div>
+                    <div class="info-empresa">
+                        <p>Teléfono Tienda</p>
+                        <input class="input-info-empresa" type="text">
+                    </div>
+                    <div class="info-empresa">
+                        <p>e-mail</p>
+                        <input class="input-info-empresa" type="text">
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button class="button-agregar-empresa">Agregar Registro</button>
+                    </div>
+            
+            </div>
+        </div>
+        <hr>
+        <div style="display: flex; justify-content: space-between;">
+            <img class="img-footer" src="img/burger-king.png" alt="">
+            <img class="img-footer" src="img/churchs.png" alt="">
+            <img class="img-footer" src="img/coco-baleadas.png" alt="">
+            <img class="img-footer" src="img/little-caesars.png" alt="">
+            <img class="img-footer" src="img/wendys.png" alt="">
+            <img class="img-footer" src="img/bigos.png" alt="">
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="seleccionado">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+        
+        <div id="contenedor-padre-productos" >
+            <div style="display: flex; justify-content: center;">
+                <p id="parrafo-productos">Gestión de Productos</p>
+            </div>
+           
+            <div id="contenedor-productos">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; background-color: #FFFFFF; border-radius: 10px;">
+                    <img class="img-productos" src="img/burger-king.png" alt="">
+                    <img class="img-productos" src="img/churchs.png" alt="">
+                    <img class="img-productos" src="img/coco-baleadas.png" alt="">
+                    <img class="img-productos" src="img/little-caesars.png" alt="">
+                    <img class="img-productos" src="img/wendys.png" alt="">
+                    <img class="img-productos" src="img/bigos.png" alt="">
+                </div>
+                <div id="contenedor-btn">
+                    <button class="btn-productos">Ver Disponibles</button>
+                    <button class="btn-productos">Agregar al menú</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos-Disponibles">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <img id="img-inicio" src="img/logo-speedio.png" alt="">
+            </div>
+            <div style="display: flex; margin-right: 50px;">
+                <div class="no-seleccionado" onclick="ingreso()">INICIO</div>
+                <div class="no-seleccionado" onclick="generarPantallaEmpresa()">EMPRESAS</div>
+                <div class="seleccionado">PRODUCTOS</div>
+                <div class="no-seleccionado">PERFIL</div>
+            </div>
+        </header>
+        <hr>
+        
+        <div id="contenedor-padre-productos" >
+            <div style="display: flex; justify-content: center;">
+                <p id="parrafo-productos">Gestión de Productos</p>
+            </div>
+           
+            <div id="contenedor-productos">
+                <div style="background-color: #FFFFFF; width: 80%; height: 500px; display: flex; justify-content: center;">
+                    
+                    <select id="productosAgg" >
+                      <option value="producto1">Coco Baleadas</option>
+                      <option value="producto2">Churchs Chicken</option>
+                      <option value="producto3">Wendys</option>
+                      <option value="producto4">Little Caesars</option>
+                      <option value="producto5">Burger King</option>
+                      <option value="producto6">Bigos</option>
+                    </select>
+                </div>
+                <div id="contenedor-productos-disponibles">
+                    <div class="producto">
+                        <img src="img/whopper.png" alt="">
+                        <div>
+                            <p>WHOPPER</p>
+                            <p>Precio: L.119</p>
+                            <p>Descripcion: 1/4 de Libra de carne de res</p>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <img src="img/whopper.png" alt="">
+                        <div>
+                            <p>WHOPPER</p>
+                            <p>Precio: L.119</p>
+                            <p>Descripcion: 1/4 de Libra de carne de res</p>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <img src="img/whopper.png" alt="">
+                        <div>
+                            <p>WHOPPER</p>
+                            <p>Precio: L.119</p>
+                            <p>Descripcion: 1/4 de Libra de carne de res</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <script src="js/controlador.js"></script>
 </body>

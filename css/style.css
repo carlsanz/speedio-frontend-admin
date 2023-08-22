@@ -13,6 +13,11 @@ body {
     display: none;
 }
 
+#header-ingreso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #logo {
     width: 200px;
 }
@@ -46,7 +51,7 @@ body {
 
 /* inicio de sesion */
 #inicio {
-    display: block;
+    display: none;
 }
 
 #img-inicio {
@@ -97,7 +102,7 @@ body {
     color: #FFFFFF;
 }
 
-#input-buscar {
+.input-buscar {
     height: 25px;
     width: 230px;
     border-radius: 10px;
@@ -127,4 +132,228 @@ body {
     font-size: 1.5rem;
     font-weight: bolder;
     margin: 10px 0 10px 0; 
+}
+
+/* inicio empleados */
+#inicio-empleados {
+    display: none;
+}
+#contenedor-estado-repartidores {
+    background-color: #FFE226;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+
+}
+#titulo-repartidor {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+.datos-repartidores {
+    font-weight: bolder;
+}
+.info-repartidores {
+    font-weight: bolder;
+    color: #0B3A56;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* asignar pedidos */
+#pedidos-sin-tomar {
+    display: none;
+}
+
+.pedidos {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin: 0 10px 20px 10px;
+    border: 1px solid #0B3A56;
+}
+
+#contenedor-pedidos {
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: #FFE226;
+    border: 1px solid #0B3A56;
+    border-radius: 10px;
+}
+#title-pedidos {
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+.icono-pedido {
+    font-size: 2.5rem;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+#div-asignar-pedido {
+    display: flex; 
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#botton-asignar-pedido {
+    background-color: #C6382C;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #0B3A56;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+/* Empresas */
+#empresas {
+    display: none;
+}
+#contenedor-gestion-empresas {
+    background-color: #FFE226;
+    margin: 100px 100px 0 100px;
+    border-radius: 10px;
+    border: 1px solid #0B3A56;
+    margin-bottom: 200px;
+}
+#input-buscar-empresas {
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #0B3A56;
+}
+#button-agregar-registro {
+    background-color: #C6382C;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #0B3A56;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.img-footer {
+    width: 7rem;
+    margin-top: 10px;
+}
+
+/* agregar-empresa */
+#agregar-empresa {
+    display: none;
+}
+#contenedor-padre-empresas{
+    background-color: #FFE226;
+    margin: 50px 80px 30px 80px;
+    border-radius: 10px;
+    padding-bottom: 20px
+
+}
+#contenedor-empresa {
+    background-color: #0B3A56;
+    margin: 0 150px 0px 150px;
+    border-radius: 10px;
+
+}
+
+.info-empresa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #FFFFFF;
+    justify-items: center;
+    align-items: center;    
+}
+.input-info-empresa {
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+}
+.button-agregar-empresa {
+    background-color: #C6382C;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #0B3A56;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+/* Productos */
+#productos {
+    display: none;
+}
+
+#contenedor-padre-productos {
+    margin: 30px 80px 30px 80px;
+    background-color: #FFE226;
+    padding-bottom: 30px;
+}
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.img-productos {
+    width: 8rem;
+    margin: 10px 10px 10px 10px;
+}
+
+#contenedor-btn {
+    display: flex;
+    flex-direction: column;
+}
+.btn-productos {
+    background-color: #C6382C;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #0B3A56;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-bottom: 15px;
+
+}
+#parrafo-productos {
+    font-size: 2rem;
+    color: #0B3A56;
+    font-weight: bolder;
+    text-decoration: wavy;
+}
+
+/* PRODUCTOS DISPONIBLES */
+#productos-Disponibles {
+    display: block;
+}
+#productosAgg {
+    width: 200px;
+    height: 30px;
+    margin: 20px 20px 20px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contenedor-productos-disponibles {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.producto {
+    background-color: #0B3A56;
+    color: #FFFFFF;
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
 }

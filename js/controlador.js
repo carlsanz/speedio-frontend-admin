@@ -1,4 +1,14 @@
 
+function inicio() {
+  document.getElementById("inicio-sesion").style.display="block"
+  document.getElementById("inicio").style.display="none"
+  document.getElementById("inicio-empleados").style.display= "none"
+  document.getElementById("pedidos-sin-tomar").style.display= "none"
+  document.getElementById("empresas").style.display= "none"
+  document.getElementById("agregar-empresa").style.display= "none"
+  document.getElementById("productos").style.display= "none"
+}
+// inicio();
 
 function validarFormulario() {
     const emailInput = document.getElementById('email');
@@ -27,5 +37,78 @@ function validarFormulario() {
   }
 
   function ingreso() {
+    document.getElementById("body").style.backgroundImage="linear-gradient(#FFFFFF, #FFFFFF)";
     
+    document.getElementById("inicio-sesion").style.display="none"
+    document.getElementById("inicio").style.display="block"
+    document.getElementById("inicio-empleados").style.display= "none"
+    document.getElementById("pedidos-sin-tomar").style.display= "none"
+    document.getElementById("empresas").style.display= "none"
+    document.getElementById("agregar-empresa").style.display= "none"
+    document.getElementById("productos").style.display= "none"
+
+  }
+
+  function repartidores() {
+    document.getElementById("body").style.backgroundImage="linear-gradient(#FFFFFF, #FFFFFF)";
+   
+    document.getElementById("inicio-sesion").style.display="none"
+    document.getElementById("inicio").style.display="none"
+    document.getElementById("inicio-empleados").style.display= "block"
+    document.getElementById("pedidos-sin-tomar").style.display= "none"
+    document.getElementById("empresas").style.display= "none"
+    document.getElementById("agregar-empresa").style.display= "none"
+    document.getElementById("productos").style.display= "none"
+
+  }
+
+  function asignarPedido() {
+    document.getElementById("body").style.backgroundImage="linear-gradient(#FFFFFF, #FFFFFF)";
+    
+    document.getElementById("inicio-sesion").style.display="none"
+    document.getElementById("inicio").style.display="none"
+    document.getElementById("inicio-empleados").style.display= "none"
+    document.getElementById("pedidos-sin-tomar").style.display= "block"
+    document.getElementById("empresas").style.display= "none"
+    document.getElementById("agregar-empresa").style.display= "none"
+    document.getElementById("productos").style.display= "none"
+
+
+  }
+
+  function generarPantallaEmpresa() {
+    document.getElementById("body").style.backgroundImage="linear-gradient(#FFFFFF, #FFFFFF)";
+    
+    document.getElementById("inicio-sesion").style.display="none"
+    document.getElementById("inicio").style.display="none"
+    document.getElementById("inicio-empleados").style.display= "none"
+    document.getElementById("pedidos-sin-tomar").style.display= "none"
+    document.getElementById("empresas").style.display= "block"
+    document.getElementById("agregar-empresa").style.display= "none"
+    document.getElementById("productos").style.display= "none"
+
+  }
+
+  agregarEmpresa = () =>{
+    document.getElementById("body").style.backgroundImage="linear-gradient(#FFFFFF, #FFFFFF)";
+    
+    document.getElementById("inicio-sesion").style.display="none"
+    document.getElementById("inicio").style.display="none"
+    document.getElementById("inicio-empleados").style.display= "none"
+    document.getElementById("pedidos-sin-tomar").style.display= "none"
+    document.getElementById("empresas").style.display= "none"
+    document.getElementById("agregar-empresa").style.display= "block"
+    document.getElementById("productos").style.display= "none"
+  }
+
+  productos =() => {
+    document.getElementById("body").style.backgroundImage="linear-gradient(#FFFFFF, #FFFFFF)";
+    
+    document.getElementById("inicio-sesion").style.display="none"
+    document.getElementById("inicio").style.display="none"
+    document.getElementById("inicio-empleados").style.display= "none"
+    document.getElementById("pedidos-sin-tomar").style.display= "none"
+    document.getElementById("empresas").style.display= "none"
+    document.getElementById("agregar-empresa").style.display= "none"
+    document.getElementById("productos").style.display= "block"
   }
