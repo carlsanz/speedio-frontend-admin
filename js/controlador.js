@@ -71,6 +71,9 @@ function validarFormulario() {
   }
 
   const repartidores = async()=> {
+    document.getElementById("repartidores-activos").innerHTML="";
+    document.getElementById("repartidores-sin-pedido").innerHTML="";
+
     let respuesta = await fetch(`http://localhost:3000/motoristas/activo/dis`, {
     method: 'GET',
     headers: {
@@ -110,10 +113,10 @@ function validarFormulario() {
           
       </div>
       <div>
-         <p class="info-repartidores">000243</p>
+         <p class="info-repartidores">${motoristasActivos[i].pedidos[0].numero_orden}</p>
       </div>
       <div>
-          <p class="info-repartidores">Col. las Lomas esquina opuesta edificio plaza azul</p>
+          <p class="info-repartidores">${motoristasActivos[i].pedidos[0].destino}</p>
       </div>
 
   </div>`;
@@ -146,10 +149,10 @@ function validarFormulario() {
           
       </div>
       <div>
-         <p class="info-repartidores">000023</p>
+         <p class="info-repartidores">000000</p>
       </div>
       <div>
-          <p class="info-repartidores">Residencial Miraflores</p>
+          <p class="info-repartidores">Sin Destino</p>
       </div>
 
   </div>`;
