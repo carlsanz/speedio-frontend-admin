@@ -145,6 +145,14 @@ body {
     margin-top: 30px;
 
 }
+#contenedor-repartidores-activos {
+    background-color: #FFE226;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    ;
+
+}
 #titulo-repartidor {
     font-size: 1.5rem;
     color: #FFFFFF;

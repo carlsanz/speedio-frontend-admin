@@ -25,7 +25,7 @@
                 <input id="email" class="input-inicio-sesion" type="text">
                 <h6 style="margin-top: 15px;" class="informacion-inicio-sesion">Contraseña</h6>
                 <input style="margin-bottom: 20px;" id="contrasena" class="input-inicio-sesion" type="password">
-                <button id="boton-inicio-sesion" onclick="validarFormulario()">Ingresar</button>
+                <button id="boton-inicio-sesion" >Ingresar</button>
 
             </div>
         </section>
@@ -45,11 +45,11 @@
         </header>
         <hr>
         <div id="contenedor-empleados" >
-            <div class="empleado-pedidos" onclick="repartidores()">
+            <div class="empleado-pedidos" >
                 <h1>EMPLEADOS</h1>
                 <input class="input-buscar" type="text" placeholder="Buscar">
                 
-                <button style="margin-bottom: 70px;" class="botton-estados">Ver Estado</button>
+                <button style="margin-bottom: 70px;" class="botton-estados" onclick="repartidores()">Ver Estado</button>
                 <button class="botton-estados">Asignar Pedido</button>
             </div>
             <div class="empleado-pedidos" onclick="asignarPedido()">
@@ -86,7 +86,7 @@
         </header>
         <hr>
 
-        <div id="contenedor-estado-repartidores">
+        <div id="contenedor-repartidores-activos">
             <div id="titulo-repartidor">
                 <p >Repartidores Activos</p>
             </div>
@@ -98,28 +98,31 @@
                 <p class="datos-repartidores">Ruta Actual</p>
             </div>
             <hr>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; align-items: center; background-color: #FFFFFF; margin-left: 20px; margin-right: 15px;border-radius: 10px;">
-                <div>
-                    <div style="display: flex; align-items: center;">
-                        <div>
-                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+            <div id="repartidores-activos">
+                <!-- <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; align-items: center; background-color: #FFFFFF; margin-left: 20px; margin-right: 15px;border-radius: 10px;">
+                    <div>
+                        <div style="display: flex; align-items: center;">
+                            <div>
+                                <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                            </div>
+                            <div>
+                                <p class="info-repartidores">Melvin Espino</p>
+                                <p class="info-repartidores">Usuario: melvine</p>
+                                <p class="info-repartidores">Telefono: 99909190</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="info-repartidores">Melvin Espino</p>
-                            <p class="info-repartidores">Usuario: melvine</p>
-                            <p class="info-repartidores">Telefono: 99909190</p>
-                        </div>
+                        
                     </div>
-                    
-                </div>
-                <div>
-                   <p class="info-repartidores">000243</p>
-                </div>
-                <div>
-                    <p class="info-repartidores">Col. las Lomas esquina opuesta edificio plaza azul</p>
-                </div>
-
+                    <div>
+                       <p class="info-repartidores">000243</p>
+                    </div>
+                    <div>
+                        <p class="info-repartidores">Col. las Lomas esquina opuesta edificio plaza azul</p>
+                    </div>
+    
+                </div> -->
             </div>
+            
         </div>
 
         <div id="contenedor-estado-repartidores">
@@ -134,28 +137,32 @@
                 <p class="datos-repartidores">Última Ruta</p>
             </div>
             <hr>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; align-items: center; background-color: #FFFFFF; margin-left: 20px; margin-right: 15px;border-radius: 10px;">
-                <div>
-                    <div style="display: flex; align-items: center;">
-                        <div>
-                            <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+            <div id="repartidores-sin-pedido">
+                <!-- <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;justify-items: center; align-items: center; background-color: #FFFFFF; margin-left: 20px; margin-right: 15px;border-radius: 10px;">
+                    <div>
+                        <div style="display: flex; align-items: center;">
+                            <div>
+                                <i  style="margin-right: 20px; font-size: 3rem;" class="fa-solid fa-circle-user"></i>
+                            </div>
+                            <div>
+                                <p class="info-repartidores">Jasson Contreras</p>
+                                <p class="info-repartidores">Usuario: Jassonc</p>
+                                <p class="info-repartidores">Telefono: 80181900</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="info-repartidores">Jasson Contreras</p>
-                            <p class="info-repartidores">Usuario: Jassonc</p>
-                            <p class="info-repartidores">Telefono: 80181900</p>
-                        </div>
+                        
                     </div>
-                    
-                </div>
-                <div>
-                   <p class="info-repartidores">000023</p>
-                </div>
-                <div>
-                    <p class="info-repartidores">Residencial Miraflores</p>
-                </div>
+                    <div>
+                       <p class="info-repartidores">000023</p>
+                    </div>
+                    <div>
+                        <p class="info-repartidores">Residencial Miraflores</p>
+                    </div>
+    
+                </div> -->
 
             </div>
+            
         </div>
     </section>
     
