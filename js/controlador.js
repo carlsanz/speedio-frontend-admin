@@ -3,6 +3,8 @@
   let passwordtxt = document.getElementById("contrasena");
   let botonIngresar = document.getElementById("boton-inicio-sesion");
 
+  let adminLogeado=[];
+
 function inicio() {
 
   document.getElementById("inicio-sesion").style.display="block";
@@ -40,7 +42,8 @@ const loginAdmin = async (user, password) => {
   });
   
   let usuario = await respuesta.json();
-  console.log(usuario.status)
+  adminLogeado=usuario.admin;
+  
   if (usuario.status==true) {
     ingreso()
   }else{
@@ -268,4 +271,27 @@ function validarFormulario() {
     document.getElementById("productos-Disponibles").style.display= "none";
     document.getElementById("agregar-Productos").style.display= "none";
     document.getElementById("perfil").style.display= "block";
+
+
+    document.getElementById("contenedor-perfil-oficial").innerHTML=
+    `<div class="info-perfil">
+    <h1>Nombre</h1>
+    <p>${adminLogeado.nombre}</p>
+    </div>
+    <div class="info-perfil">
+        <h1>Apellidos</h1>
+        <p>${adminLogeado.apellido}</p>
+    </div>
+    <div class="info-perfil">
+        <h1>Cargo</h1>
+        <p>${adminLogeado.cargo}</p>
+    </div>
+    <div class="info-perfil">
+        <h1>Usuario</h1>
+        <p>${adminLogeado.nombre}</p>
+    </div>
+    <div class="info-perfil">
+        <h1>E-mail</h1>
+        <p>${adminLogeado.correo_electronico}</p>
+    </div>            `;
   }
